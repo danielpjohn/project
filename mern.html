@@ -1,0 +1,28 @@
+<html>
+<title>HTML</title>
+
+<head>
+    <link rel="stylesheet" href="./css/mern.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+<div id="demo"></div>
+<button  type="button" onclick="loadDoc()">Change Content</button>
+
+<script>
+ loadDoc = () => {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if((xhttp.readyState == 4) && (xhttp.status == 200)){
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+}
+  xhttp.open("GET","form1.html",true);
+  xhttp.send();
+}
+</script>
+</body>
+
+</html>
+ <!-- form full attributes   -->

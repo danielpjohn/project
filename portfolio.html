@@ -1,0 +1,92 @@
+<html>
+    <title>Protfolio</title>
+    <head>
+        <link rel="stylesheet" href="./css/portfolio.css">
+    </head>
+    <body>
+<div class="container">
+
+        <div class="container1">
+  
+            <div class="div1">
+                <img src="./images/male-avatar-profile-picture-vector-10211761.jpg" alt="me"/>
+            </div>
+
+            <nav>
+                <div class="container2">
+                    <ul>
+                        <li class="home active"><a href="#home">Home</a></li>
+                        <li class="about"><a href="#about">About</a></li>       
+                        <li class="skills"><a href="#skills">Skills</a></li>
+                        <li class="contact"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container3">
+            <section id="home">
+              <p>Hi,I am Daniel</p>
+              <p>Web Developer</p>
+            </section>
+            <section id="about">
+                <div class="head">
+                    <h2>About Me</h2>
+                </div>
+          <div>I am Daniel P John.I am a Web Developer,and I'm very passionate and dedicated to my work.
+            I am aiming to be a part of organization where I can rise to my full potential and use my 
+            talents ans skills to expand the growth of
+            the organization and myself.</div>
+            </section>
+            <section id="skills">
+                <div class="skill"><h1>Skills</h1></div>
+                <div class="content">
+                    <div class="card">
+                        <div class="cbody">Photoshop</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="cbody">Html</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="cbody">CSS</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="cbody">WordPress</div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="contact">
+                <h1>Contact</h1>
+               <div>Panackamuriyil House,East Othera P.O,Thiruvalla</div>
+               <div>7902218230</div>
+               <div>danielpjohn746@gmail.com</div>
+            </section>
+
+        </div>
+    </div>
+    <script>
+        const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav .container2 ul li");
+window.onscroll = () => {
+  var current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 60) {
+      current = section.getAttribute("id"); }
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+};
+    </script>
+    </body>
+</html>
